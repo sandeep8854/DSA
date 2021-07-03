@@ -1,7 +1,5 @@
 package sandeep.Leetcode.com;
-
 import java.util.Scanner;
-
 public class Leetcode_392_1_Subsequence 
 {
 	public static void main(String[] args)
