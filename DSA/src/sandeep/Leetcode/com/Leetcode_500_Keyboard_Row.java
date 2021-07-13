@@ -69,7 +69,8 @@ public class Leetcode_500_Keyboard_Row
 	                res.add(str);
 	            }
 	        }
-	        return res.toArray(new String[res.size()]);
+	    //    return res.toArray(new String[res.size()]);
+	        return res.toArray(new String[0]);
 	}
 
 }
