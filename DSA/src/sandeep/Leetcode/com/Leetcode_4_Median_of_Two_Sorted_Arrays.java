@@ -21,7 +21,7 @@ public class Leetcode_4_Median_of_Two_Sorted_Arrays
 			arr[i]=sc.nextInt();
 		}
 		double res=medianOfTwoSorted(arr1,arr);
-		System.out.println(res);
+		System.out.println(res+"000");
 	}
 	private static double medianOfTwoSorted(int[] a, int[] b)
 	{
@@ -81,30 +81,3 @@ Enter Second Array Length ?  ?
 5	
 	 */
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-		
-		
-		
-
