@@ -1,6 +1,7 @@
 package sandeep.Leetcode.com;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
 public class Leetcode_15_3Sum
@@ -17,21 +18,25 @@ public class Leetcode_15_3Sum
 		}
 		System.out.println("Enter Any Number Which You Want to compare with triplets  ?   ");
 		int compare=sc.nextInt();
-		List<List<Integer>>res=sumTree(arr,compare);
+		HashSet<List<Integer>>res=sumTree(arr,compare);
 		if(res.isEmpty())
 		{
 			System.out.println("In Array Have No sum of Triplets.");
 		}
 		else {
-			System.out.println(res.toString());
+			for(List<Integer> uniNum:res)
+			{
+				System.out.print(uniNum);
+			}
+			
 		}
 	}
-	private static List<List<Integer>> sumTree(int[] arr, int compare)
+	private static HashSet<List<Integer>> sumTree(int[] arr, int compare)
 	{
 		List<List<Integer>> triplets=new ArrayList<>();
 		int L=arr.length;
 		int temp=0;
-	//	Arrays.sort(arr);
+		Arrays.sort(arr);
 		for(int i=0;i<L-2;i++)
 		{
 			for(int j=i+1;j<L-1;j++)
@@ -45,7 +50,9 @@ public class Leetcode_15_3Sum
 				}
 			}
 		}
-		return triplets;
+		HashSet<List<Integer>> uniqu=new HashSet<>(triplets);
+		
+		return uniqu;
 	}
 }
 
@@ -60,8 +67,9 @@ Enter Any Array Length  ?    ?
 -4
 Enter Any Number Which You Want to compare with triplets  ?   
 0
-[[-1, 0, 1], [-1, 2, -1], [0, 1, -1]]
-*/
+[-1, -1, 2][-1, 0, 1]
+
+ */
 /*
 Enter Any Array Length  ?    ?  
 5
